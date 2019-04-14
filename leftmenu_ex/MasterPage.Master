@@ -1,0 +1,75 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MasterPage.master.vb" Inherits="leftmenu_ex.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                 <div>
+            <div class="header">
+                <asp:Label ID="OneSvyLbl" runat="server" Text="ONESVY" CssClass="header-text"></asp:Label>
+                <asp:ImageButton ID="Home_Img" runat="server" ImageUrl="Home_img.png" CssClass="Home_img" />
+            </div>
+                     <div>
+                          <asp:ContentPlaceHolder ID="LoginName" runat="server">
+                           </asp:ContentPlaceHolder>
+                     </div>
+                     <div style="margin-top:50px;">
+            <div class="nav-container">
+                <nav>
+                    <ul class="mcd-menu">
+                        <li>
+                            <a href="#"> <strong>Survey 1</strong></a>
+                                <ul>
+                                    <li>
+                                        <a href="SurveyRequest.aspx"> Submenu 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Submenu 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Submenu 3</a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong>Survey 2</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><strong>Survey 3</strong></a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="#"> Submenu 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Submenu 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Submenu 1</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+           <asp:ContentPlaceHolder ID="content" runat="server" >
+             </asp:ContentPlaceHolder>
+                     </div>
+        </div>
+            </div>
+           
+        </div>
+    </form>
+</body>
+</html>
